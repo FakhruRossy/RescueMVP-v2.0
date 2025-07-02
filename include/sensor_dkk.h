@@ -8,8 +8,6 @@ struct SensorData {
   bool sos;
 };
 
-// Fungsi-fungsi langsung diimplementasikan di sini
-
 inline void readGPS(float &lat, float &lon) {
   lat = -7.12345;
   lon = 110.54321;
