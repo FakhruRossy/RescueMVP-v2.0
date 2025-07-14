@@ -7,6 +7,7 @@
 #define GPS_RX_PIN 33
 #define GPS_TX_PIN 32
 
+extern volatile bool sos_status; 
 TinyGPSPlus gps;
 HardwareSerial gpsSerial(1);
 
@@ -104,7 +105,7 @@ inline SensorData readSensorData() {
     data.hdop = 99.99;
   }
 
-  data.sos = false;
+  data.sos = sos_status;
   return data;
 }
 
